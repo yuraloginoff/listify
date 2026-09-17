@@ -279,7 +279,7 @@ input { font: inherit; color: inherit; }
 .main {
   max-width: 1400px;
   margin: 0 auto;
-  padding: var(--space-6) var(--space-6) var(--space-16);
+  padding: var(--space-5) var(--space-1) var(--space-6);
 }
 
 .board {

@@ -111,7 +111,9 @@
     if (!domain) return '';
     // Return cached data URL if available
     if (faviconCache[domain]) return faviconCache[domain];
-    return `https://icons.duckduckgo.com/ip3/${encodeURIComponent(domain)}.ico`;
+    // return `https://icons.duckduckgo.com/ip3/${encodeURIComponent(domain)}.ico`;
+    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=32`;
+
   }
 
   // ---- Favicon cache ----
@@ -145,7 +147,8 @@
     ];
 
     for (const domain of domains) {
-      const favUrl = `https://icons.duckduckgo.com/ip3/${encodeURIComponent(domain)}.ico`;
+      // const favUrl = `https://icons.duckduckgo.com/ip3/${encodeURIComponent(domain)}.ico`;
+      const favUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=32`;
       let cached = false;
       for (const makeProxy of proxies) {
         try {
